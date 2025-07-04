@@ -25,7 +25,7 @@ public class AA_hit : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Aplica dano
-            IF_HealthSystem healthSystem = collision.GetComponent<IF_HealthSystem>();
+            AA_healthSystem healthSystem = collision.GetComponent<IF_HealthSystem>();
             if (healthSystem != null)
             {
                 healthSystem.TakeDamage(dano);

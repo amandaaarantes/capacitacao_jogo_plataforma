@@ -13,10 +13,10 @@ public class balas : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (!collision.CompareTag("Player"))
         {
-            healthSystem alvo = collision.GetComponent<healthSystem>();
+            HSistem alvo = collision.GetComponent<HSistem>();
             if (alvo != null)
             {
                 alvo.TakeDamage(damage);

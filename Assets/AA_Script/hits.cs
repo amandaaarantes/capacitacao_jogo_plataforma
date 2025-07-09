@@ -8,7 +8,7 @@ public class hits : MonoBehaviour
     public int damage = 1;
     public float knockbakForce = 5f;
     public float knockbackDelay = 1f;
-    public enemyPatrol patrol;
+    public footPatrol patrol;
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class hits : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Aplica dano
-            healthSystem hs = collision.GetComponent<healthSystem>();
+            HSistem hs = collision.GetComponent<HSistem>();
             if (hs != null)
             {
                 hs.TakeDamage(damage);
@@ -37,7 +37,7 @@ public class hits : MonoBehaviour
                 // Adiciona componente vertical pra criar a par�bola
                 Vector2 knockbackDir = new Vector2(direcao.x, 1f).normalized;
 
-                StartCoroutine(AplicarKnockbackComDelay(playerRb, knockbackDir, knockbackDelay));
+                //StartCoroutine(AplicarKnockbackComDelay(playerRb, knockbackDir, knockbackDelay));
 
             }
         }

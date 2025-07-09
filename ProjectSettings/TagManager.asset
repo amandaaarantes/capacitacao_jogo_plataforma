@@ -41,5 +41,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3650007053
+    locked: 0
+  - name: bg2
+    uniqueID: 312984993
+    locked: 0
+  - name: ground
+    uniqueID: 2955596355
+    locked: 0
+  - name: upground
+    uniqueID: 3596501669
+    locked: 0
+  - name: player
+    uniqueID: 2717838551
+    locked: 0
+  - name: borda
+    uniqueID: 3967344113
+    locked: 0
   m_RenderingLayers:
   - Default

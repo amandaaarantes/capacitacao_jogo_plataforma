@@ -6,22 +6,22 @@ public class lifeUIController : MonoBehaviour
 {
     [Header("Referências")]
     public GameObject heartFull;
-    public GameObject hearthEmpty;
+    public GameObject heartEmpty;
     public Transform heartParent;
-    public healthSistem hs;
+    public HSistem hs;
 
     private List<GameObject> heartObjects = new List<GameObject>();
 
     void Start()
     {
-        atualizaCoracoes();
+        atualizarCoracoes();
     }
     void Update()
     {
 
     }
 
-    public void atualizaCoracoes()
+    public void atualizarCoracoes()
     {
         int maxVidas = hs.vida;
         int vidasAtuais = hs.vida;

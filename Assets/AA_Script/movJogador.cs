@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class movJogador : MonoBehaviour
@@ -13,9 +14,12 @@ public class movJogador : MonoBehaviour
 
     [Header("Verificação do Chão")]
     public float raioGroundCheck = 0.2f;
+    public float raioWallCheck = 0.2f;
     private bool estaNoGround;
+    private bool estaNaWall;
     public LayerMask groundLayer;
     public Transform groundCheck;
+    public Transform wallCheck;
 
 
     public Rigidbody2D rb;
@@ -50,8 +54,11 @@ public class movJogador : MonoBehaviour
 
         // verifica se esta no chão
         estaNoGround = Physics2D.OverlapCircle(groundCheck.position, raioGroundCheck, groundLayer);
+        //verifica se esta na parede
+        estaNaWall = Physics2D.OverlapCircle(wallCheck.position, raioWallCheck, groundLayer);
         // Cria um círculo invisível na posição do "groundCheck" com o raio definido. Se esse círculo colidir com qualquer objeto na camada "groundLayer", isGrounded se torna 'true'.
         animatorJogador.SetBool("estaNoChao", estaNoGround);
+        animatorJogador.SetBool("estaNaParede", estaNaWall);
 
         if (estaNoGround)
         {

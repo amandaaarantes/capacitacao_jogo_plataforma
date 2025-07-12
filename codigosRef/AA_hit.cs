@@ -8,6 +8,9 @@ public class AA_hit : MonoBehaviour
 
     public float knockbackDelay = 1f;
 
+    [Header("Animator")]
+    public Animator animator;
+
     public AA_enemyFootPatrol patrol;
 
     private void Start()
@@ -29,10 +32,13 @@ public class AA_hit : MonoBehaviour
             if (healthSystem != null)
             {
                 healthSystem.TakeDamage(dano);
+                animator.SetBool("dano", true);
             }
+            else
+                animator.SetBool("morreu", true);
 
             // Knockback baseado na dire��o do inimigo
-            Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
+                Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
             if (playerRb != null && patrol != null)
             {
                 Vector2 direcao = patrol.DirecaoMovimento.normalized;

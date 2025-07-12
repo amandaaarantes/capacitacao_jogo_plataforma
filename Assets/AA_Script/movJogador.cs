@@ -32,6 +32,7 @@ public class movJogador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animatorJogador = GetComponent<Animator>();
         pulosRestantes = quantPulosExtras;
+        
     }
 
     void Update()

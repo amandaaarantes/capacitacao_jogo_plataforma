@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Plataform
-  - 
+  - Stairs
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
     locked: 0
   - name: bg2
     uniqueID: 312984993
+    locked: 0
+  - name: bg3
+    uniqueID: 3843270923
+    locked: 0
+  - name: bg4
+    uniqueID: 3196228115
     locked: 0
   - name: ground
     uniqueID: 2955596355

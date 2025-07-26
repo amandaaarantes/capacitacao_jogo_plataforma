@@ -8,7 +8,7 @@ public class hits : MonoBehaviour
     public int damage = 1;
     public float knockbakForce = 5f;
     public float knockbackDelay = 1f;
-    public patrolCrabby patrolCrabby;
+    public enemyPatrol patrolCrabby;
 
     [Header("Animator")]
     public Animator animator;
@@ -29,13 +29,13 @@ public class hits : MonoBehaviour
             if (hs != null)
             {
                 hs.TakeDamage(damage);
-                animator.SetBool("ataca", true);
+                animator.SetTrigger("ataca");
             }
 
             Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
             if (playerRb != null && patrolCrabby != null)
             {
-                Vector2 direcao = patrolCrabby.moveDirection;
+                Vector2 direcao = patrolCrabby.DirecaoMovimento;
 
                 // Adiciona componente vertical pra criar a par�bola
                 Vector2 knockbackDir = new Vector2(direcao.x, 1f).normalized;

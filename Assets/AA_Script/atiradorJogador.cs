@@ -9,12 +9,14 @@ public class atiradorJogador : MonoBehaviour
 
     [Header("Configuração")]
     public float velocidadeTiro = 10f;
-
+    private Animator anim;
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // botão esquerdo do mouse
         {
             atirar();
+            anim = gameObject.GetComponent<Animator>();
+            anim.SetTrigger("ataca");
         }
     }
 

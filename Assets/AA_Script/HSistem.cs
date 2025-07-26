@@ -13,19 +13,24 @@ public class HSistem : MonoBehaviour
     [Header("Referência para a UI de vida")]
     public lifeUIController uiController;
 
+    private Animator anim;
+
 
     public void TakeDamage(int amount)
     {
+        anim = gameObject.GetComponent<Animator>();
         if (estaInvencivel)
             return;
 
         vida -= amount;
+        
+        anim.SetTrigger("dano");
         Debug.Log("Tomou dano! Vida restante: " + vida);
 
         // Atualiza a UI aqui se o objeto for o jogador
         if (CompareTag("Player") && uiController != null)
         {
-            uiController.atualizarCoracoes();
+            uiController.AtualizarCoracoes();
         }
 
         if (vida <= 0)
@@ -34,7 +39,7 @@ public class HSistem : MonoBehaviour
 
             if (CompareTag("Player"))
             {
-
+                anim.SetBool("morreu", true);
                 Debug.Log("Player morreu! Aqui você pode chamar animação ou reiniciar a fase.");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }

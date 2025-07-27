@@ -55,8 +55,6 @@ public class HSistem : MonoBehaviour
 
 
     }
-
-
     private IEnumerator Invencibilidade()
     {
         estaInvencivel = true;

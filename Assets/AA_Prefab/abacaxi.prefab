@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8277669687651119806}
   - component: {fileID: 7759559101808561274}
   - component: {fileID: -3669242830990522773}
+  - component: {fileID: 4538544905280526888}
   m_Layer: 0
   m_Name: abacaxi
   m_TagString: Fruit
@@ -157,3 +158,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7652674, y: 1.1020136}
   m_EdgeRadius: 0
+--- !u!114 &4538544905280526888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922353985535542375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf6271e779686940be27be49ecac49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 1

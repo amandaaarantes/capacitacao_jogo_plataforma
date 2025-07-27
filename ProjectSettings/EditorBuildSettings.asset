@@ -7,17 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-    guid: 08d5281c1d8ac2243b06e4618861fa5b
-  - enabled: 1
-    path: Assets/Scenes/MenuFases.unity
-    guid: 33c459006704e6e45b0510d539df4398
+    guid: 9aa728772514694408e83cdc6e6f5874
   - enabled: 1
     path: Assets/Scenes/FaseUm.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Ganhou.unity
+    guid: 08d5281c1d8ac2243b06e4618861fa5b
+  - enabled: 0
     path: Assets/Scenes/FaseDois.unity
-    guid: e347f4c2449f2b646b6b03633d5cdd69
-  - enabled: 1
+    guid: 1a10a22a7b6f17540b08a2c22692a71f
+  - enabled: 0
     path: Assets/Scenes/FaseTres.unity
     guid: 72bd2509866b07f419a0c1cb63cc5c6b
   m_configObjects:

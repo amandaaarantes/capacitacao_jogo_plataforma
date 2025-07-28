@@ -116807,9 +116807,6 @@ Transform:
   - {fileID: 978342384}
   - {fileID: 519420032}
   - {fileID: 1376095649}
-  - {fileID: 1798773387}
-  - {fileID: 1558110626}
-  - {fileID: 1735276218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1466705859
@@ -117038,13 +117035,13 @@ Transform:
   m_GameObject: {fileID: 1558110625}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7254902, y: 4.6099997, z: 0}
+  m_LocalPosition: {x: -34.695717, y: -0.86529446, z: 0.48200214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 413438881}
   - {fileID: 1122245746}
-  m_Father: {fileID: 1466705858}
+  m_Father: {fileID: 1730874171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1558110627
 SpriteRenderer:
@@ -117113,7 +117110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dee23c9ae0523d44bf197101f106fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraJogador: {fileID: 519420028}
+  cameraJogador: {fileID: 1466705858}
   speedParallax: 0.8
 --- !u!1 &1568125615
 GameObject:
@@ -117542,6 +117539,40 @@ Transform:
   - {fileID: 2132132864}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1730874170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730874171}
+  m_Layer: 0
+  m_Name: Parallax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730874171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730874170}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.921207, y: 11.675294, z: -0.48200214}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1798773387}
+  - {fileID: 1558110626}
+  - {fileID: 1735276218}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735276217
 GameObject:
   m_ObjectHideFlags: 0
@@ -117569,13 +117600,13 @@ Transform:
   m_GameObject: {fileID: 1735276217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.024509668, y: 0.86000013, z: 0}
+  m_LocalPosition: {x: -36.445717, y: -4.615294, z: 0.48200214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1682181963}
   - {fileID: 1316130049}
-  m_Father: {fileID: 1466705858}
+  m_Father: {fileID: 1730874171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1735276219
 SpriteRenderer:
@@ -117644,8 +117675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dee23c9ae0523d44bf197101f106fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraJogador: {fileID: 519420028}
-  speedParallax: 0.6
+  cameraJogador: {fileID: 1466705858}
+  speedParallax: 0.4
 --- !u!1 &1743468854
 GameObject:
   m_ObjectHideFlags: 0
@@ -117886,7 +117917,7 @@ Transform:
   m_GameObject: {fileID: 1798773386}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42549038, y: 4.51, z: 0}
+  m_LocalPosition: {x: -35.995716, y: -0.9652939, z: 0.48200214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -117894,7 +117925,7 @@ Transform:
   - {fileID: 343145208}
   - {fileID: 687232475}
   - {fileID: 1242816382}
-  m_Father: {fileID: 1466705858}
+  m_Father: {fileID: 1730874171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1798773388
 SpriteRenderer:
@@ -117963,7 +117994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dee23c9ae0523d44bf197101f106fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraJogador: {fileID: 519420028}
+  cameraJogador: {fileID: 1466705858}
   speedParallax: 1
 --- !u!1 &1908315526
 GameObject:
@@ -118311,6 +118342,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1743468856}
   - {fileID: 1784536208}
+  - {fileID: 1730874171}
   - {fileID: 1466705858}
   - {fileID: 1724768571}
   - {fileID: 1568125616}

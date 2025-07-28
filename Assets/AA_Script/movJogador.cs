@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,15 +18,23 @@ public class movJogador : MonoBehaviour
     public float raioWallCheck = 0.2f;
     private bool estaNoGround;
     private bool estaNaWall;
+
     public LayerMask groundLayer;
     public Transform groundCheck;
     public Transform wallCheck;
-
-
     public Rigidbody2D rb;
+
     private float moveInput;
     private Animator animatorJogador;
 
+    [Header("Dashing")]
+    public float dashPower = 20f;
+    public float dashTime = 0.2f;
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashCooldown = 1f;
+
+    // public TrailRenderer tr;
 
     void Start()
     {
@@ -33,10 +42,16 @@ public class movJogador : MonoBehaviour
         animatorJogador = GetComponent<Animator>();
         pulosRestantes = quantPulosExtras;
         
+
     }
 
     void Update()
     {
+
+        if (isDashing)
+        {
+            return; //impede o movimento durante o dash!
+        }
         // ler movimentação em x
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
@@ -77,10 +92,32 @@ public class movJogador : MonoBehaviour
         // restante do animator:
         animatorJogador.SetFloat("VelocidadeX", Mathf.Abs(moveInput));
         animatorJogador.SetFloat("VelocidadeY", rb.linearVelocity.y);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
     }
 
     void flip(float direcao)
     {
         transform.localScale = new Vector3(Mathf.Sign(direcao), 1f, 1f);
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        //tr.emitting = true;
+        yield return new WaitForSeconds(dashTime);
+        //tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+
     }
 }

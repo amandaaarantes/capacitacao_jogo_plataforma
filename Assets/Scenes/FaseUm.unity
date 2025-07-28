@@ -116930,6 +116930,8 @@ MonoBehaviour:
   groundCheck: {fileID: 1908315527}
   wallCheck: {fileID: 978342384}
   rb: {fileID: 1466705860}
+  dashPower: 25
+  dashTime: 0.2
 --- !u!114 &1466705863
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "plataforma_capacitacao.sln"
+    "dotnet.defaultSolution": "plataforma_capacitacao.sln",
+    "vscode-pets.petColor": "black"
 }

@@ -1,7 +1,6 @@
  using UnityEngine;
 
 public class enemyPatrol : MonoBehaviour
-
 {
     private Rigidbody2D enemyRb;
     public float moveSpeed = 2f;
